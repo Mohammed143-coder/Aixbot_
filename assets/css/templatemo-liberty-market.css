@@ -209,10 +209,10 @@ body {
 }
 
 .border-button a {
-    font-size: 14px;
+    font-size: 1.2rem;
     color: #fff;
     background-color: transparent;
-    border: 1px solid rgb(5 150 105);
+    border: 1px solid rgb(5, 150, 105);
     padding: 12px 30px;
     display: inline-block;
     border-radius: 25px;
@@ -225,10 +225,7 @@ body {
 }
 
 .border-button a:after {
-    width: 78%;
     height: 2px;
-    background-color: #fff;
-    content: '';
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -236,15 +233,15 @@ body {
 }
 
 .border-button a:hover {
-    background-color: rgb(5 150 105);
+    background-color: rgb(5, 150, 105); /* Same as border color */
     color: #fff;
 }
 
 .main-button a {
     font-size: 14px;
     color: #fff;
-    background-color: rgb(5 150 105);
-    border: 1px solid rgb(5 150 105);
+    background-color: rgb(5, 150, 105);
+    border: 1px solid rgb(5, 150, 105);
     padding: 12px 30px;
     display: inline-block;
     border-radius: 25px;
@@ -268,10 +265,11 @@ body {
 }
 
 .main-button a:hover {
-    background-color: #fff;
-    color: rgb(5 150 105);
-    border: 1px solid #fff;
+    background-color: rgb(5, 150, 105); /* Same as default state */
+    color: #fff;
+    border: 1px solid rgb(5, 150, 105); /* Same as default state */
 }
+
 
 section {
     margin-top: 120px;
@@ -504,6 +502,69 @@ header {
     font-size: 1.2rem;
 }
 
+/* Enhanced Logo Animation */
+.logo-container:hover .logo {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Enhanced Menu Links Hover Effect */
+.menu-links a {
+    position: relative;
+    color: #fff; /* White text color */
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    display: block;
+    background: rgb(16, 185, 129);
+    transition: width 0.3s;
+    bottom: -5px;
+}
+
+.menu-links a:hover {
+    color: rgb(16, 185, 129); /* Highlight color on hover */
+    transform: scale(1.05);
+}
+
+.menu-links a:hover::after {
+    width: 100%;
+}
+
+/* Enhanced Header Background Transition */
+header {
+    background-color: rgb(32, 29, 32);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(32, 29, 32, 0.9); /* Slightly transparent background on scroll */
+    padding: 5px 20px; /* Reduced padding on scroll */
+}
+
+/* Enhanced Toggle Button Animation */
+.toggle-btn {
+    display: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.toggle-btn.active {
+    transform: rotate(90deg); /* Rotate button on active */
+    transition: transform 0.3s ease-in-out;
+}
+
 /* Media Queries */
 
 /* Small devices (sm) */
@@ -663,28 +724,31 @@ header {
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
     text-align: center; /* Center align text */
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation for the entire banner */
 }
 
-.main-banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(236, 253, 245);
-    z-index: 1;
-}
-
-.main-banner * {
-    position: relative;
-    z-index: 2;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .main-banner h6,
 .main-banner h2,
 .main-banner p {
     color: black;
+    animation: slideUp 1.2s ease-in-out forwards; /* Slide-up animation for text */
+    opacity: 0; /* Ensure text is hidden before animation starts */
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .main-banner h6 {
@@ -693,6 +757,7 @@ header {
     font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    animation-delay: 0.5s; /* Delay to create staggered effect */
 }
 
 .main-banner h2 {
@@ -700,63 +765,77 @@ header {
     font-weight: 700;
     line-height: 4rem;
     text-transform: uppercase;
-    color: rgb(16, 185, 129);
+    color: black;
     margin-bottom: 20px; /* Add spacing below heading */
+    animation-delay: 0.7s; /* Delay to create staggered effect */
 }
+.main-banner h2 .multiple-txt {
+    color: #10B981; /* Tailwind CSS emerald-500 color */
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+
 
 .main-banner p {
     margin: 0 auto 30px; /* Center text and add bottom margin */
     font-weight: 400;
     font-size: 1rem;
     max-width: 600px; /* Limit text width for readability */
+    animation-delay: 0.9s; /* Delay to create staggered effect */
 }
 
 .main-banner .buttons {
     display: flex;
     justify-content: center; /* Center buttons */
     gap: 15px; /* Add spacing between buttons */
+    animation: bounceIn 1s ease-in-out forwards;
+    animation-delay: 1.1s; /* Delay to create staggered effect */
+    opacity: 0;
 }
 
-.main-banner .border-button {
-    /* padding: 10px 20px;
-    border: 2px solid #282b2f;
-    border-radius: 5px;
-    background-color: #fff; /* Background color for better visibility */
-    /* color: #282b2f; */ */
-    transition: background-color 0.3s ease, color 0.3s ease;
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-/* .main-banner .border-button:hover { */
-    /* background-color: #282b2f; Dark background on hover */
-    /* color: #fff; White text on hover */
-/* } */
+.main-banner .border-button,
+.main-banner .main-button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-/* .main-banner .main-button {
-    padding: 10px 20px;
-    background-color: rgb(16, 185, 129);
-    border-radius: 5px;
-    color: #fff;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-} */
-
+.main-banner .border-button:hover,
 .main-banner .main-button:hover {
-    /* background-color: #fff; White background on hover */
-    /* color: rgb(16, 185, 129); Green text on hover */
     transform: scale(1.05); /* Slight scale effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
 }
 
 .main-banner .owl-banner {
     margin-top: 20px; /* Adjusted top margin */
+    animation: slideIn 1.5s ease-in-out forwards;
+    animation-delay: 1.3s; /* Delay to create staggered effect */
+    opacity: 0;
 }
 
-.main-banner .owl-nav {
-    display: none;
-}
-
-.main-banner .owl-nav .owl-prev,
-.main-banner .owl-nav .owl-next {
-    display: none;
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* Responsive Styles */
@@ -769,7 +848,7 @@ header {
     .main-banner h6 {
         font-size: 1.5rem;
     }
-    .main-banner .multiple-txt{
+    .main-banner .multiple-txt {
         font-size: 2rem;
     }
 
@@ -834,6 +913,7 @@ header {
 }
 
 
+
 /* Categories Collection Styles */
 .categories-collections {
     padding: 20px;
@@ -848,21 +928,202 @@ header {
 /* Default styles for the customer-logos slider */
 .customer-logos {
     display: flex;
-    overflow: auto;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
     padding: 20px 0;
+    white-space: nowrap; /* Prevent wrapping of slides */
 }
+
 
 .customer-logos .slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 5px; /* Reduced default margin */
+    margin: 0 5px; /* Adjust as needed */
+    flex: 0 0 auto; /* Prevent slides from shrinking */
 }
 
 .customer-logos .slide img {
     max-width: 100%;
     height: auto;
 }
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .customer-logos {
+        padding: 10px 0;
+    }
+
+    .customer-logos .slide {
+        margin: 0 3px; /* Adjust margin for smaller screens */
+    }
+}
+
+
+/* Section Heading Styles */
+.section-heading h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Main Button Styles */
+.main-button a {
+    background-color: white;
+    color: rgb(16, 185, 129);
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.main-button a:hover {
+    background-color: rgb(16, 185, 129);
+    color: white;
+}
+
+/* Item Styles */
+.item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item h4 {
+    font-size: 1.4rem;
+    color: rgb(16, 185, 129);
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+.item p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Number Styles */
+.number h6 {
+    background-color: rgb(16, 185, 129);
+    color: white;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Ad Container Styles */
+.ad-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: rgb(16, 185, 129);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    color: white;
+}
+
+.ad-text {
+    max-width: 60%;
+}
+
+.ad-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ad-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.ad-text ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.ad-text ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    background-color: white;
+    color: rgb(16, 185, 129);
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: rgb(16, 185, 129);
+    color: white;
+    transform: scale(1.05);
+}
+
+.ad-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .ad-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ad-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .item h4 {
+        font-size: 1.2rem;
+    }
+
+    .item p {
+        font-size: 0.9rem;
+    }
+
+    .ad-text h1 {
+        font-size: 2rem;
+    }
+
+    .ad-text p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
 
 /* Slider Margin Reduction for Smaller Screens */
 
@@ -1172,6 +1433,80 @@ h2 {
     background-color: #0d9b75; /* Darker green on hover */
     transform: scale(1.05); /* Slight scale effect on hover */
 }
+
+/* Enhanced Text Styles for ad-container */
+.ad-text h1 {
+    font-size: 2.5rem; /* Larger font size for impact */
+    font-weight: 800; /* Extra bold for emphasis */
+    margin-bottom: 20px; /* Spacing below heading */
+    color: #333; /* Darker color for better readability */
+    letter-spacing: 1px; /* Slight spacing between letters */
+    text-transform: uppercase; /* Make the text uppercase for a bold statement */
+    line-height: 1.2; /* Tighter line height for more impact */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.ad-text h1:hover {
+    color: rgb(16, 185, 129); /* Change color on hover to match CTA button */
+}
+
+.ad-text p {
+    font-size: 1.2rem; /* Slightly larger base font size */
+    margin-bottom: 25px; /* Increased spacing below paragraph */
+    line-height: 1.7; /* Comfortable line spacing */
+    color: #555; /* Softer black for less harsh contrast */
+    font-style: italic; /* Italics for emphasis */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.ad-text p:hover {
+    color: rgb(16, 185, 129); /* Subtle color change on hover */
+}
+
+.ad-text ul {
+    list-style-type: none; /* Remove default bullets */
+    margin: 0;
+    padding-left: 0; /* Remove padding for clean look */
+    font-size: 1.1rem; /* Larger font size for readability */
+    line-height: 1.8; /* Comfortable line spacing */
+    color: #333; /* Darker color for better readability */
+}
+
+.ad-text ul li {
+    margin-bottom: 15px; /* Spacing between list items */
+    position: relative; /* Position for custom bullets */
+    padding-left: 25px; /* Space for custom bullets */
+}
+
+.ad-text ul li::before {
+    content: '•'; /* Custom bullet */
+    color: rgb(16, 185, 129); /* Matching color with the CTA button */
+    font-size: 1.5rem; /* Larger bullet */
+    position: absolute; /* Position bullet */
+    left: 0; /* Position bullet */
+    top: 0; /* Align bullet with text */
+}
+
+/* CTA Button Styles */
+.ad-text a {
+    display: inline-block;
+    padding: 15px 30px; /* Larger padding for more prominence */
+    font-size: 1.2rem; /* Slightly larger font size */
+    font-weight: 700; /* Bold text */
+    color: #fff; /* White text */
+    background-color: rgb(16, 185, 129); /* Green background */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Add shadow for depth */
+}
+
+.ad-text a:hover {
+    background-color: #0d9b75; /* Darker green on hover */
+    transform: scale(1.1); /* Slight scale effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
 
 /* Responsive Styles */
 
@@ -1533,9 +1868,6 @@ Currently Market Style
     border-bottom: 1px solid #7453fc;
 }
 
-/* why whatsapp section */
-/* External CSS for the WhatsApp promotion section */
-
 .why-whatsapp {
     text-align: center;
     padding: 50px 20px;
@@ -1568,6 +1900,7 @@ Currently Market Style
     padding: 20px;
     width: 250px;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .why-whatsapp .feature-box img {
@@ -1578,6 +1911,17 @@ Currently Market Style
 .why-whatsapp .feature-box h3 {
     font-size: 1.5em;
     color: #333;
+}
+
+.why-whatsapp .feature-box p {
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.why-whatsapp .feature-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .explore-button {
@@ -1595,6 +1939,7 @@ Currently Market Style
 .explore-button:hover {
     background-color: #128C7E; /* Darker green on hover */
 }
+
 
 
 /* General styles for the footer */
@@ -1619,6 +1964,35 @@ footer .d-flex .text-white {
 footer .text-center .row {
     flex-wrap: wrap;
 }
+
+.accordion-button {
+    font-size: 1.2rem;
+    color: rgb(5, 150, 105);
+    font-weight: 700;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.accordion-button:hover {
+    color: #128C7E; /* Darker green on hover */
+    background-color: rgba(5, 150, 105, 0.1);
+}
+
+.accordion-button i {
+    margin-right: 10px;
+}
+
+.accordion-body p {
+    margin: 0;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-collapse {
+    transition: height 0.3s ease;
+}
+
 
 /* Responsive adjustments for tablets and laptops */
 @media (max-width: 992px) {
@@ -2472,6 +2846,9 @@ body {
 @media (max-width: 767px) {
     .top-seller .item {
         justify-content: center;
+    }
+    .footer-link{
+        background-color: rgb(5 150 105);
     }
 }
 
