@@ -61,7 +61,6 @@ https://templatemo.com/tm-577-liberty-market
                 <a href="#banner_main" class="active">Home</a>
                 <a href="#Partners" class="menu-tabs">Partners</a>
                 <a href="#features" class="menu-tabs">Features</a>
-                <a href="#" class="menu-tabs">Contact</a>
                 <a href="#accordionExample" class="menu-tabs">FAQ</a>
                 <a href="#footer" class="menu-tabs">About</a>
             </div>
@@ -86,13 +85,19 @@ https://templatemo.com/tm-577-liberty-market
                         
                         <p>Leverage WhatsApp for unmatched customer engagement with high open rates. Our advanced API keeps you connected and drives growth.</p>
                         <div class="buttons">
-                            <div class="border-button">
-                                <a href="#" style="color: black;">Start Trial</a>
+                            <div style="border: 2px solid black; padding: 12px 30px; border-radius: 25px; display: inline-block; margin-right: 10px;"
+                                 onmouseover="this.style.backgroundColor='#059669'; this.querySelector('a').style.color='black';"
+                                 onmouseout="this.style.backgroundColor='transparent'; this.querySelector('a').style.color='black';">
+                                <a href="#" style="color: black; text-decoration: none;">Start Trial</a>
                             </div>
-                            <div class="main-button">
-                                <a href="https://youtube.com/templatemo" target="_blank">Contact Us</a>
+                            <div style="background-color: #059669; color: white; padding: 12px 30px; border-radius: 25px; display: inline-block;"
+                                 onmouseover="this.style.backgroundColor='#ffffff'; this.querySelector('a').style.color='black';"
+                                 onmouseout="this.style.backgroundColor='#059669'; this.querySelector('a').style.color='white';">
+                                <a href="#" target="_blank" style="color: white; text-decoration: none;">Contact Us</a>
                             </div>
                         </div>
+                        
+                        
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
@@ -119,11 +124,12 @@ https://templatemo.com/tm-577-liberty-market
                     <section class=" customer-logos slider ">
                         <div class="slide "><img src="./assets/images/brand1.png "></div>
                         <div class="slide "><img src="./assets/images/brand2.png "></div>
-                        <div class="slide "><img src="./assets/images/brand3.png "></div>
-                        <div class="slide "><img src="./assets/images/chitra.webp"></div>
+                        <div class="slide "><img src="./assets/images/svj2.jpeg "></div>
                         <div class="slide "><img src="./assets/images/pressana.png "></div>
-                        <div class="slide "><img src="./assets/images/brand1.png "></div>
-                        <div class="slide "><img src="./assets/images/chitra.webp"></div>
+                        <div class="slide "><img src="./assets/images/infra.jpeg "></div>
+                        <div class="slide "><img src="./assets/images/atmv.png "></div>
+                        <!-- <div class="slide "><img src="./assets/images/brand1.png "></div>
+                        <div class="slide "><img src="./assets/images/chitra.webp"></div> -->
 
                     </section>
                 </div>
@@ -290,7 +296,7 @@ https://templatemo.com/tm-577-liberty-market
                                     <img src="assets/images/display name.png" alt="Display Name Suggestion">
                                 </div>
                                 <h4>Display Name Suggestion from Client</h4>
-                                <p>Ensure it is appropriate and recognizable to enhance engagement.</p>
+                                <p>Ensure the name is appropriate, recognizable, and aligns with your brand to enhance customer engagement effectively.</p>
                             </div>
                         </div>
                     </div>
@@ -355,10 +361,10 @@ https://templatemo.com/tm-577-liberty-market
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        The WhatsApp API enables businesses to integrate WhatsApp messaging into their systems, allowing
-                        for automated, scalable, and secure communication with customers. This API supports features
-                        like sending and receiving messages, managing contacts, and automating customer interactions,
-                        enhancing customer service and engagement.
+                        <strong>The WhatsApp API enables businesses to integrate WhatsApp messaging into their systems, allowing
+                            for automated, scalable, and secure communication with customers. This API supports features
+                            like sending and receiving messages, managing contacts, and automating customer interactions,
+                            enhancing customer service and engagement.</strong>
                     </div>
                 </div>
             </div>
@@ -511,9 +517,10 @@ https://templatemo.com/tm-577-liberty-market
             <!-- Section: Links  -->
 
             <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            <div class="text-center p-3" style="color: gray; background-color: rgba(0, 0, 0, 0.2)">
                 © <span id="year"></span> - All rights reserved:
-                <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                <a >AixBot Product of</a> 
+                <a  href="https://skyxdigisolutions.com/">Sky X Digi Solutions</a>
             </div>
             <!-- Copyright -->
         </footer>
@@ -531,6 +538,10 @@ https://templatemo.com/tm-577-liberty-market
         <script src="assets/js/tabs.js "></script>
         <script src="assets/js/popup.js "></script>
         <script src="assets/js/custom.js "></script>
+        <script>
+            // Get the current year and display it in the span with id="year"
+            document.getElementById("year").innerText = new Date().getFullYear();
+        </script>
 
 
 
