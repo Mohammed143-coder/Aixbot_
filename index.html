@@ -11,6 +11,11 @@
 
   <title>Aixbot</title>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon" />
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  rel="stylesheet"
+/>
+
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -339,7 +344,7 @@
             </p>
             <div class="buttons">
               <div class="button-outline-container">
-                <a href="#contact-form" class="button-outline">Start Trial</a>
+                <a href="#contact-form" class="button-outline">Start Trial Pack</a>
               </div>
               <div class="button-filled-container">
                 <a href="tel:+917845863256" target="_blank" class="button-filled">Contact Us</a>
@@ -436,15 +441,15 @@
         <div class="rounded-container">
           <!-- Header Section -->
           <div class="row align-items-center mb-5">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
               <div class="section-heading">
                 <div class="line-dec"></div>
                 <h2>How to get WhatsApp Business API</h2>
               </div>
             </div>
-            <div class="col-lg-4">
-              <a class="#contact-section">Start Trial</a>
-            </div>
+            <div class="button-outline-container  text-center">
+                <a href="#contact-form" class="button-outline">Start Trial Pack</a>
+              </div>
           </div>
         </div>
 
@@ -658,309 +663,329 @@
       </h4>
     </div>
     <div class="comparison-table">
-      <!-- Desktop View (md and up) -->
-      <div class="table-responsive d-none d-md-block">
-        <table class="table table-compare m-0">
-          <!-- Desktop table content remains the same as your original -->
-        </table>
+  <!-- Desktop View (md and up) -->
+  <div class="table-responsive d-none d-md-block">
+    <table class="table table-compare m-0">
+      <thead>
+        <tr class="table-header-row">
+          <th class="feature-column bg-primary bg-opacity-10 text-primary">
+            <div class="d-flex align-items-center ps-3">
+              <i class="fas fa-list-check me-2"></i>
+              <span>Features</span>
+            </div>
+          </th>
+          <th class="solution-column bg-danger bg-opacity-10">
+            <div class="d-flex flex-column align-items-center py-3">
+              <div class="icon-wrapper bg-danger mb-2">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h5 class="mb-1">WhatsApp Business App</h5>
+              <small class="text-muted fw-normal">Basic Solution</small>
+              <div class="mt-2">
+                <span class="badge bg-light text-danger">Limited Features</span>
+              </div>
+            </div>
+          </th>
+          <th class="solution-column bg-success bg-opacity-10">
+            <div class="d-flex flex-column align-items-center py-3">
+              <div class="icon-wrapper bg-success mb-2">
+                <i class="fas fa-server"></i>
+              </div>
+              <h5 class="mb-1">WhatsApp Business API</h5>
+              <small class="text-muted fw-normal">Enterprise Solution</small>
+              <div class="mt-2">
+                <span class="badge bg-light text-success">Full Features</span>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="feature-row">
+          <td class="feature-name"><i class="fas fa-robot me-2"></i> Automated Messages</td>
+          <td class="app-value">
+            <span class="badge bg-danger-soft"><i class="fas fa-times me-1"></i> Not available</span>
+          </td>
+          <td class="api-value">
+            <span class="badge bg-success-soft"><i class="fas fa-check me-1"></i> Available</span>
+            <div class="feature-tooltip">Triggers on keywords and welcome messages</div>
+          </td>
+        </tr>
+        <tr class="feature-row">
+          <td class="feature-name"><i class="fas fa-bullhorn me-2"></i> Send Bulk Notifications</td>
+          <td class="app-value">
+            <span class="badge bg-danger-soft"><i class="fas fa-times me-1"></i> Limited to 256 contacts</span>
+            <div class="feature-tooltip">Risk of account ban</div>
+          </td>
+          <td class="api-value">
+            <span class="badge bg-success-soft"><i class="fas fa-check me-1"></i> Available</span>
+            <div class="feature-tooltip">Send custom messages on trigger keywords</div>
+          </td>
+        </tr>
+        <tr class="feature-row">
+          <td class="feature-name"><i class="fas fa-users me-2"></i> Unlimited Access</td>
+          <td class="app-value">
+            <span class="badge bg-danger-soft"><i class="fas fa-times me-1"></i> Only 1 login</span>
+          </td>
+          <td class="api-value">
+            <span class="badge bg-success-soft"><i class="fas fa-check me-1"></i> Role-based access</span>
+          </td>
+        </tr>
+        <tr class="feature-row">
+          <td class="feature-name"><i class="fas fa-plug me-2"></i> Integration</td>
+          <td class="app-value">
+            <span class="badge bg-danger-soft"><i class="fas fa-times me-1"></i> Not possible</span>
+          </td>
+          <td class="api-value">
+            <span class="badge bg-success-soft"><i class="fas fa-check me-1"></i> Supported</span>
+            <div class="feature-tooltip">CRM integration supported</div>
+          </td>
+        </tr>
+        <tr class="feature-row">
+          <td class="feature-name"><i class="fas fa-robot me-2"></i> Chatbots</td>
+          <td class="app-value">
+            <span class="badge bg-danger-soft"><i class="fas fa-times me-1"></i> Not available</span>
+          </td>
+          <td class="api-value">
+            <span class="badge bg-success-soft"><i class="fas fa-check me-1"></i> Available</span>
+          </td>
+        </tr>
+        <tr class="feature-row">
+          <td class="feature-name"><i class="fas fa-project-diagram me-2"></i> Workflows Setup</td>
+          <td class="app-value">
+            <span class="badge bg-danger-soft"><i class="fas fa-times me-1"></i> Not supported</span>
+          </td>
+          <td class="api-value">
+            <span class="badge bg-success-soft"><i class="fas fa-check me-1"></i> Supported</span>
+            <div class="feature-tooltip">Custom and pre-built workflows</div>
+          </td>
+        </tr>
+        <tr class="feature-row">
+          <td class="feature-name"><i class="fas fa-chart-bar me-2"></i> Analytics</td>
+          <td class="app-value">
+            <span class="badge bg-danger-soft"><i class="fas fa-times me-1"></i> Not available</span>
+          </td>
+          <td class="api-value">
+            <span class="badge bg-success-soft"><i class="fas fa-check me-1"></i> Available</span>
+            <div class="feature-tooltip">Detailed campaign & agent analytics</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Mobile View (sm and down) -->
+  <div class="d-block d-md-none">
+    <div class="mobile-comparison">
+      <!-- Automated Messages -->
+      <div class="card feature-card mb-3 border-0 shadow-sm">
+        <div class="card-header bg-light">
+          <h6 class="mb-0 d-flex align-items-center">
+            <i class="fas fa-robot me-2 text-primary"></i> Automated Messages
+          </h6>
+        </div>
+        <div class="card-body">
+          <div class="business-app mb-3">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-mobile-alt text-danger me-2"></i>
+              <strong class="text-white">Business App</strong>
+            </div>
+            <div class="text-danger">
+              <i class="fas fa-times-circle me-1"></i> Not available
+            </div>
+          </div>
+          <div class="business-api">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-server text-success me-2"></i>
+              <strong class="text-white">Business API</strong>
+            </div>
+            <div class="text-success">
+              <i class="fas fa-check-circle me-1"></i> Available
+            </div>
+            <div class="feature-desc text-muted mt-1">Triggers on keywords and welcome messages</div>
+          </div>
+        </div>
       </div>
 
-      <!-- Tablet View (sm) -->
-      <div class="d-none d-sm-block d-md-none">
-        <!-- Tablet view content remains the same as your original -->
+      <!-- Send Bulk Notifications -->
+      <div class="card feature-card mb-3 border-0 shadow-sm">
+        <div class="card-header bg-light">
+          <h6 class="mb-0 d-flex align-items-center">
+            <i class="fas fa-bullhorn me-2 text-primary"></i> Send Bulk Notifications
+          </h6>
+        </div>
+        <div class="card-body">
+          <div class="business-app mb-3">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-mobile-alt text-danger me-2"></i>
+              <strong class="text-white">Business App</strong>
+            </div>
+            <div class="text-danger">
+              <i class="fas fa-times-circle me-1"></i> Limited to 256 contacts
+            </div>
+            <div class="feature-desc text-danger mt-1">Risk of account ban</div>
+          </div>
+          <div class="business-api">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-server text-success me-2"></i>
+              <strong class="text-white">Business API</strong>
+            </div>
+            <div class="text-success">
+              <i class="fas fa-check-circle me-1"></i> Send custom messages
+            </div>
+            <div class="feature-desc text-muted mt-1">Triggers on keywords with no limits</div>
+          </div>
+        </div>
       </div>
 
-      <!-- Improved Mobile View (xs) -->
-      <div class="d-block d-sm-none">
-        <div class="row g-3">
-          <!-- Feature Cards - Each feature gets its own card -->
-          <div class="col-12">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-header bg-light">
-                <h5 class="mb-0 d-flex align-items-center">
-                  <i class="fas fa-robot text-primary me-2"></i>
-                  Automated Messages
-                </h5>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-6">
-                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-mobile-alt text-danger me-2"></i>
-                        <h6 class="mb-0">Business App</h6>
-                      </div>
-                      <div class="text-danger">
-                        <i class="fas fa-times-circle me-1"></i> Not available
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-server text-success me-2"></i>
-                        <h6 class="mb-0">Business API</h6>
-                      </div>
-                      <div class="text-success">
-                        <i class="fas fa-check-circle me-1"></i> Available
-                      </div>
-                      <small class="text-muted d-block mt-2">
-                        Triggers on keywords and welcome messages
-                      </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <!-- Unlimited Access -->
+      <div class="card feature-card mb-3 border-0 shadow-sm">
+        <div class="card-header bg-light">
+          <h6 class="mb-0 d-flex align-items-center">
+            <i class="fas fa-users me-2 text-primary"></i> Unlimited Access
+          </h6>
+        </div>
+        <div class="card-body">
+          <div class="business-app mb-3">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-mobile-alt text-danger me-2"></i>
+              <strong class="text-white">Business App</strong>
+            </div>
+            <div class="text-danger">
+              <i class="fas fa-times-circle me-1"></i> Only 1 login allowed
             </div>
           </div>
-
-          <div class="col-12">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-header bg-light">
-                <h5 class="mb-0 d-flex align-items-center">
-                  <i class="fas fa-bullhorn text-primary me-2"></i>
-                  Send Bulk Notifications
-                </h5>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-6">
-                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-mobile-alt text-danger me-2"></i>
-                        <h6 class="mb-0">Business App</h6>
-                      </div>
-                      <div class="text-danger">
-                        <i class="fas fa-times-circle me-1"></i> Limited to
-                        256 contacts
-                      </div>
-                      <small class="text-danger d-block mt-2">
-                        Risk of account ban
-                      </small>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-server text-success me-2"></i>
-                        <h6 class="mb-0">Business API</h6>
-                      </div>
-                      <div class="text-success">
-                        <i class="fas fa-check-circle me-1"></i> Available
-                      </div>
-                      <small class="text-muted d-block mt-2">
-                        Send custom messages on trigger keywords
-                      </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="business-api">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-server text-success me-2"></i>
+              <strong class="text-white">Business API</strong>
+            </div>
+            <div class="text-success">
+              <i class="fas fa-check-circle me-1"></i> Role-based access supported
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Unlimited Access -->
-          <div class="col-12">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-header bg-light">
-                <h5 class="mb-0 d-flex align-items-center">
-                  <i class="fas fa-users text-primary me-2"></i>
-                  Unlimited Access
-                </h5>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-6">
-                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-mobile-alt text-danger me-2"></i>
-                        <h6 class="mb-0">Business App</h6>
-                      </div>
-                      <div class="text-danger">
-                        <i class="fas fa-times-circle me-1"></i> Only 1 login
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-server text-success me-2"></i>
-                        <h6 class="mb-0">Business API</h6>
-                      </div>
-                      <div class="text-success">
-                        <i class="fas fa-check-circle me-1"></i> Role-based
-                        access
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <!-- Integration -->
+      <div class="card feature-card mb-3 border-0 shadow-sm">
+        <div class="card-header bg-light">
+          <h6 class="mb-0 d-flex align-items-center">
+            <i class="fas fa-plug me-2 text-primary"></i> Integration
+          </h6>
+        </div>
+        <div class="card-body">
+          <div class="business-app mb-3">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-mobile-alt text-danger me-2"></i>
+              <strong class="text-white">Business App</strong>
+            </div>
+            <div class="text-danger">
+              <i class="fas fa-times-circle me-1"></i> Not possible
             </div>
           </div>
-
-          <!-- Include all other features similarly -->
-          <!-- Integration -->
-          <div class="col-12">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-header bg-light">
-                <h5 class="mb-0 d-flex align-items-center">
-                  <i class="fas fa-plug text-primary me-2"></i>
-                  Integration
-                </h5>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-6">
-                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-mobile-alt text-danger me-2"></i>
-                        <h6 class="mb-0">Business App</h6>
-                      </div>
-                      <div class="text-danger">
-                        <i class="fas fa-times-circle me-1"></i> Not possible
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-server text-success me-2"></i>
-                        <h6 class="mb-0">Business API</h6>
-                      </div>
-                      <div class="text-success">
-                        <i class="fas fa-check-circle me-1"></i> Supported
-                      </div>
-                      <small class="text-muted d-block mt-2">
-                        CRM integration supported
-                      </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="business-api">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-server text-success me-2"></i>
+              <strong class="text-white">Business API</strong>
+            </div>
+            <div class="text-success">
+              <i class="fas fa-check-circle me-1"></i> CRM integration supported
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Chatbots -->
-          <div class="col-12">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-header bg-light">
-                <h5 class="mb-0 d-flex align-items-center">
-                  <i class="fas fa-robot text-primary me-2"></i>
-                  Chatbots
-                </h5>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-6">
-                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-mobile-alt text-danger me-2"></i>
-                        <h6 class="mb-0">Business App</h6>
-                      </div>
-                      <div class="text-danger">
-                        <i class="fas fa-times-circle me-1"></i> Not available
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-server text-success me-2"></i>
-                        <h6 class="mb-0">Business API</h6>
-                      </div>
-                      <div class="text-success">
-                        <i class="fas fa-check-circle me-1"></i> Available
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <!-- Chatbots -->
+      <div class="card feature-card mb-3 border-0 shadow-sm">
+        <div class="card-header bg-light">
+          <h6 class="mb-0 d-flex align-items-center">
+            <i class="fas fa-robot me-2 text-primary"></i> Chatbots
+          </h6>
+        </div>
+        <div class="card-body">
+          <div class="business-app mb-3">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-mobile-alt text-danger me-2"></i>
+              <strong class="text-white">Business App</strong>
+            </div>
+            <div class="text-danger">
+              <i class="fas fa-times-circle me-1"></i> Not available
             </div>
           </div>
-
-          <!-- Workflows Setup -->
-          <div class="col-12">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-header bg-light">
-                <h5 class="mb-0 d-flex align-items-center">
-                  <i class="fas fa-project-diagram text-primary me-2"></i>
-                  Workflows Setup
-                </h5>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-6">
-                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-mobile-alt text-danger me-2"></i>
-                        <h6 class="mb-0">Business App</h6>
-                      </div>
-                      <div class="text-danger">
-                        <i class="fas fa-times-circle me-1"></i> Not supported
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-server text-success me-2"></i>
-                        <h6 class="mb-0">Business API</h6>
-                      </div>
-                      <div class="text-success">
-                        <i class="fas fa-check-circle me-1"></i> Supported
-                      </div>
-                      <small class="text-muted d-block mt-2">
-                        Custom and pre-built workflows
-                      </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="business-api">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-server text-success me-2"></i>
+              <strong class="text-white">Business API</strong>
+            </div>
+            <div class="text-success">
+              <i class="fas fa-check-circle me-1"></i> Available
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Analytics -->
-          <div class="col-12">
-            <div class="card shadow-sm border-0 h-100">
-              <div class="card-header bg-light">
-                <h5 class="mb-0 d-flex align-items-center">
-                  <i class="fas fa-chart-bar text-primary me-2"></i>
-                  Analytics
-                </h5>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-6">
-                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-mobile-alt text-danger me-2"></i>
-                        <h6 class="mb-0">Business App</h6>
-                      </div>
-                      <div class="text-danger">
-                        <i class="fas fa-times-circle me-1"></i> Not available
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fas fa-server text-success me-2"></i>
-                        <h6 class="mb-0">Business API</h6>
-                      </div>
-                      <div class="text-success">
-                        <i class="fas fa-check-circle me-1"></i> Available
-                      </div>
-                      <small class="text-muted d-block mt-2">
-                        Detailed campaign & agent analytics
-                      </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <!-- Workflows Setup -->
+      <div class="card feature-card mb-3 border-0 shadow-sm">
+        <div class="card-header bg-light">
+          <h6 class="mb-0 d-flex align-items-center">
+            <i class="fas fa-project-diagram me-2 text-primary"></i> Workflows Setup
+          </h6>
+        </div>
+        <div class="card-body">
+          <div class="business-app mb-3">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-mobile-alt text-danger me-2"></i>
+              <strong class="text-white">Business App</strong>
+            </div>
+            <div class="text-danger">
+              <i class="fas fa-times-circle me-1"></i> Not supported
+            </div>
+          </div>
+          <div class="business-api">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-server text-success me-2"></i>
+              <strong class="text-white">Business API</strong>
+            </div>
+            <div class="text-success">
+              <i class="fas fa-check-circle me-1"></i> Custom and pre-built workflows supported
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Analytics -->
+      <div class="card feature-card mb-3 border-0 shadow-sm">
+        <div class="card-header bg-light">
+          <h6 class="mb-0 d-flex align-items-center">
+            <i class="fas fa-chart-bar me-2 text-primary"></i> Analytics
+          </h6>
+        </div>
+        <div class="card-body">
+          <div class="business-app mb-3">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-mobile-alt text-danger me-2"></i>
+              <strong class="text-white">Business App</strong>
+            </div>
+            <div class="text-danger">
+              <i class="fas fa-times-circle me-1"></i> Not available
+            </div>
+          </div>
+          <div class="business-api">
+            <div class="d-flex align-items-center mb-1">
+              <i class="fas fa-server text-success me-2"></i>
+              <strong class="text-white">Business API</strong>
+            </div>
+            <div class="text-success">
+              <i class="fas fa-check-circle me-1"></i> Detailed campaign & agent analytics
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
   </div>
 
   <div class="ad-container">
@@ -975,7 +1000,7 @@
         <li>Get all your leads segregated according to ad campaigns</li>
         <li>Build chatbot flows based on ads or retarget via broadcast</li>
       </ul>
-      <a href="#contact-form" class="cta-button">Start Your Trial Now →</a>
+      <a href="#contact-form" class="cta-button">Check your pack Now →</a>
     </div>
     <div class="ad-image">
       <img src="./assets/images/ads aixbot.jpeg" alt="Ad Example" />
@@ -1189,8 +1214,8 @@
           <div class="contact-card shadow-lg rounded-4 p-4 p-md-5 bg-white">
             <h2 class="display-5 fw-bold mb-4 text-primary">Get in Touch</h2>
             <p class="mb-4 text-muted">
-              Have questions or want to discuss a project? Fill out the form
-              below and we'll get back to you within 24 hours.
+              Have questions or want to discuss? Fill out the form
+              below and we'll get back to you within working 4 hours.
             </p>
 
             <form action="https://api.web3forms.com/submit" method="POST" class="needs-validation" novalidate>
