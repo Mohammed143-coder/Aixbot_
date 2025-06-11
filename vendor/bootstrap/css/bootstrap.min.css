@@ -11262,5 +11262,15 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.footer-link-hover {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .footer-link-hover:hover {
+    transform: scale(1.05);
+    color: rgb(5 150 105) !important;
+  }
+  
 
 /*# sourceMappingURL=bootstrap.css.map */

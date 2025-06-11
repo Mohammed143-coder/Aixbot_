@@ -2,627 +2,1585 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8" />
+  <meta name="author" content="templatemo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <meta charset="utf-8">
-    <meta name="author" content="templatemo">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+  <title>Aixbot</title>
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon" />
 
-    <title>Junaith</title>
-    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- brands -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <!-- brands -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css" />
+  <link rel="stylesheet" href="assets/css/templatemo-liberty-market.css" />
+  <link rel="stylesheet" href="assets/css/owl.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <style>
+    .create-nft {
+      background-color: rgb(16, 185, 129);
+      min-height: 100vh;
+      padding: 40px 0;
+    }
 
+    .rounded-container {
+      background: transparent;
+      padding: 20px;
+    }
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-liberty-market.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <!--
+    .section-heading {
+      margin-bottom: 30px;
+    }
 
-TemplateMo 577 Liberty Market
+    .line-dec {
+      width: 50px;
+      height: 3px;
+      background: white;
+      margin-bottom: 15px;
+    }
 
-https://templatemo.com/tm-577-liberty-market
+    .section-heading h2 {
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0;
+    }
 
--->
+    .main-button {
+      text-align: right;
+      margin-bottom: 30px;
+    }
+
+    .main-button a {
+      background: white;
+      color: rgb(16, 185, 129);
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .main-button a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Card styling */
+    .card-with-badge {
+      position: relative;
+      height: 100%;
+    }
+
+    .outside-badge {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      background: rgb(16, 185, 129);
+      border: 3px solid white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .uniform-card {
+      height: 320px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .uniform-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 20px;
+    }
+
+    .icon-container {
+      flex-shrink: 0;
+      margin: 15px 0;
+    }
+
+    .card-title {
+      color: rgb(16, 185, 129);
+      font-weight: bold;
+      margin: 10px 0;
+      font-size: 1.1rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .card-description {
+      color: black;
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .section-heading h2 {
+        font-size: 2rem;
+      }
+
+      .main-button {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .uniform-card {
+        height: 300px;
+      }
+    }
+
+    .contact-section {
+      background-color: #f8f9fa;
+    }
+
+    .contact-card,
+    .map-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-card:hover,
+    .map-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .input-group-text {
+      width: 50px;
+      justify-content: center;
+    }
+
+    .form-control,
+    .input-group-text {
+      border: 1px solid #dee2e6;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+
+    .icon-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .map-container {
+      min-height: 300px;
+    }
+
+    .contact-info {
+      border-top: 5px solid #0d6efd;
+    }
+
+    /* Validation styles */
+    .was-validated .form-control:invalid,
+    .form-control.is-invalid {
+      border-color: #dc3545;
+    }
+
+    .was-validated .form-control:valid,
+    .form-control.is-valid {
+      border-color: #198754;
+    }
+
+    @media (max-width: 767.98px) {
+      .contact-info {
+        padding: 2rem !important;
+      }
+    }
+
+    /* Improved Mobile View Styles */
+    .comparison-table .card {
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .comparison-table .card-header {
+      background-color: #f8f9fa;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .comparison-table .card-header h5 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .solution-box {
+      border-left: 3px solid transparent;
+      height: 100%;
+    }
+
+    .bg-danger-bg {
+      background-color: rgba(220, 53, 69, 0.05);
+      border-left-color: #dc3545 !important;
+    }
+
+    .bg-success-bg {
+      background-color: rgba(25, 135, 84, 0.05);
+      border-left-color: #198754 !important;
+    }
+
+    .solution-box h6 {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .solution-box small {
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+
+    /* Ensure text is visible */
+    .text-danger,
+    .text-success {
+      font-weight: 500;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 575.98px) {
+      .comparison-table .card-body {
+        padding: 1rem;
+      }
+
+      .solution-box {
+        padding: 0.75rem !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-        <div class="preloader-inner">
-            <span class="dot"></span>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-    <!-- ***** Preloader End ***** -->
+  </div>
+  <!-- ***** Preloader End ***** -->
 
-    <!-- ***** Header Area Start ***** -->
-    <header>
-        <nav class="navbar">
-            <div class="logo-container">
-                <img src="./assets/images/Aix Logo.png" alt="Logo" class="logo">
+  <!-- ***** Header Area Start ***** -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="./assets/images/Aix Logo.png" alt="Logo" class="logo" />
+      </div>
+      <div class="menu-links" id="menu-links">
+        
+        <a href="#Partners" class="menu-tabs hover-links">Partners</a>
+        <a href="#features" class="menu-tabs hover-links">Features</a>
+        <a href="#accordionExample" class="menu-tabs hover-links">FAQ</a>
+         <a href="#footer" class="menu-tabs hover-links">About</a>
+        <a href="#contact-form" class="active hover-links">Contact Us</a>
+       
+      </div>
+      <a href="#" class="cta">Get Started</a>
+      <div class="toggle-btn" id="toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <div class="main-banner" id="banner_main">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="header-text">
+            <h6 style="color: rgb(5, 150, 105)">
+              It's Time to Grow Your Business with WhatsApp
+            </h6>
+            <h2>
+              Effectively with WhatsApp API: <br />
+              <span class="multiple-txt text-emerald-500">Create</span>
+            </h2>
+
+            <p>
+              Leverage WhatsApp for unmatched customer engagement with high
+              open rates. Our advanced API keeps you connected and drives
+              growth.
+            </p>
+            <div class="buttons">
+              <div class="button-outline-container">
+                <a href="#contact-form" class="button-outline">Start Trial</a>
+              </div>
+              <div class="button-filled-container">
+                <a href="tel:+917845863256" target="_blank" class="button-filled">Contact Us</a>
+              </div>
             </div>
-            <div class="menu-links" id="menu-links">
-                <a href="#banner_main" class="active">Home</a>
-                <a href="#Partners" class="menu-tabs">Partners</a>
-                <a href="#features" class="menu-tabs">Features</a>
-                <a href="#accordionExample" class="menu-tabs">FAQ</a>
-                <a href="#footer" class="menu-tabs">About</a>
-            </div>
-            <a href="#" class="cta">Get Started</a>
-            <div class="toggle-btn" id="toggle-btn"><i class="fa-solid fa-bars"></i></div>
-        </nav>
-    </header>
-    <!-- ***** Header Area End ***** -->
-
-
-
-    <!-- ***** Main Banner Area Start ***** -->
-    <div class="main-banner" id="banner_main">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 align-self-center">
-                    <div class="header-text">
-                        <h6 style="color:rgb(5, 150, 105)">It's Time to Grow Your Business with WhatsApp</h6>
-                        <h2>Effectively with WhatsApp API: <br>
-                            <span class="multiple-txt text-emerald-500">Create</span>
-                        </h2>
-                        
-                        <p>Leverage WhatsApp for unmatched customer engagement with high open rates. Our advanced API keeps you connected and drives growth.</p>
-                        <div class="buttons">
-                            <div class="button-outline-container">
-                              <a href="#" class="button-outline" style="color:black">Start Trial</a>
-                            </div>
-                            <div class="button-filled-container">
-                              <a href="#" target="_blank" class="button-filled" style="color:black" >Contact Us</a>
-                            </div>
-                          </div>
-                          
-                    </div>
-                </div>
-                
-                <div class="col-lg-5 offset-lg-1">
-                    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> 
-
-    <dotlottie-player src="https://lottie.host/b474f916-d735-4909-a0c3-5104f64c42b5/LDSFthV55Z.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></dotlottie-player>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div class="col-lg-5 offset-lg-1">
+          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+            type="module"></script>
+          <dotlottie-player src="https://lottie.host/b474f916-d735-4909-a0c3-5104f64c42b5/LDSFthV55Z.json"
+            background="transparent" speed="1" style="width: 400px; height: 400px" loop autoplay></dotlottie-player>
+        </div>
+      </div>
     </div>
-    <!-- ***** Main Banner Area End ***** -->
+  </div>
+  <!-- ***** Main Banner Area End ***** -->
 
-
-    <div class="categories-collections ">
-        <div class="container ">
-            <div class="row ">
-                <div class="container2" id="Partners">
-                    <h2 style="color:black; ">Our <em style="color: rgb(5 150 105);">Partners</em></h2>
-                    <section class=" customer-logos slider ">
-                        <div class="slide "><img src="./assets/images/brand1.png "></div>
-                        <div class="slide "><img src="./assets/images/brand2.png "></div>
-                        <div class="slide "><img src="./assets/images/svj2.jpeg "></div>
-                        <div class="slide "><img src="./assets/images/pressana.png "></div>
-                        <div class="slide "><img src="./assets/images/infra.jpeg "></div>
-                        <div class="slide "><img src="./assets/images/honda.png "></div>
-                        <div class="slide "><img src="./assets/images/atmv.png "></div>
-                        <!-- <div class="slide "><img src="./assets/images/brand1.png "></div>
-                        <div class="slide "><img src="./assets/images/chitra.webp"></div> -->
-
-                    </section>
-                </div>
-
-                <div class="center-container">
-                    <div>
-                        <div>
-                            <div>
-                                <div id="features">
-                                    <div class="underline"></div>
-                                    <h2>
-                                        Grow Your Business Using <em>WhatsApp API</em> In Market.
-                                    </h2>
-                                </div>
-                            </div>
-                            <div class="card-container">
-                                <div class="card">
-                                    <img src="assets/images/whatsapp chat.jpeg" alt="WhatsApp Chat">
-                                    <div class="card-content">
-                                        <h4>WhatsApp Chat</h4>
-                                        <p>Add a WhatsApp chat button on your website, Facebook, and Instagram ads to invite queries from highly qualified leads.</p>
-                                        <a href="#" class="explore-button">Explore WhatsApp Chat</a>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <img src="assets/images/integrate toold.jpeg" alt="Integrate Your Tools">
-                                    <div class="card-content">
-                                        <h4>Integrate Your Tools</h4>
-                                        <p>Native and custom integrations for your favorite tools, CRMs, helpdesks, and anything else in your software stack.</p>
-                                        <a href="#" class="explore-button">Explore Tools</a>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <img src="assets/images/chatbots.jpeg" alt="Automated Chatbots">
-                                    <div class="card-content">
-                                        <h4>Automated Chatbots</h4>
-                                        <p>Start automated conversations with easy-to-build chatbots using a drag-and-drop interface with amazing features.</p>
-                                        <a href="#" class="explore-button">Explore Chatbots</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                
+  <div class="categories-collections">
+    <div class="container">
+      <div class="row">
+        <div class="container2" id="Partners">
+          <h2 style="color: black">
+            Our <em style="color: rgb(5 150 105)">Partners</em>
+          </h2>
+          <section class="customer-logos slider">
+            <div class="slide"><img src="./assets/images/brand1.png" /></div>
+            <div class="slide"><img src="./assets/images/brand2.png" /></div>
+            <div class="slide"><img src="./assets/images/svj2.jpeg" /></div>
+            <div class="slide">
+              <img src="./assets/images/pressana.png" />
             </div>
+            <div class="slide"><img src="./assets/images/infra.jpeg" /></div>
+            <div class="slide"><img src="./assets/images/honda.png" /></div>
+            <div class="slide"><img src="./assets/images/atmv.png" /></div>
+          </section>
         </div>
 
-
-
-        <div class="create-nft" style="background-color: rgb(16, 185, 129);">
-            <div class="container">
-                <div class="rounded-container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="section-heading">
-                                <div class="line-dec"></div>
-                                <h2>How to get WhatsApp Business API</h2>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="main-button">
-                                <a href="#">Start Trial</a>
-                            </div>
-                        </div>
-                    
-                        <!-- Step 1 -->
-                        <div class="col-lg-4">
-                            <div class="item second-item">
-                                <div class="number">
-                                    <h6>1</h6>
-                                </div>
-                                <div class="icon">
-                                    <img src="assets/images/phone_17470287.png" alt="Phone No">
-                                </div>
-                                <h4>Phone No</h4>
-                                <p>Provide the phone number to be used with the WhatsApp API service. Engage without registering a WhatsApp account.</p>
-                            </div>
-                        </div>
-                    
-                        <!-- Step 2 -->
-                        <div class="col-lg-4">
-                            <div class="item second-item">
-                                <div class="number">
-                                    <h6>2</h6>
-                                </div>
-                                <div class="icon">
-                                    <img src="assets/images/emil.png" alt="Email ID">
-                                </div>
-                                <h4>Email ID</h4>
-                                <p>Email ID is required for creating the WhatsApp API onboarding. Revolutionize communications with our service.</p>
-                            </div>
-                        </div>
-                    
-                        <!-- Step 3 -->
-                        <div class="col-lg-4">
-                            <div class="item second-item">
-                                <div class="number">
-                                    <h6>3</h6>
-                                </div>
-                                <div class="icon">
-                                    <img src="assets/images/bussiness portfolio.png" alt="Business Portfolio">
-                                </div>
-                                <h4>Business Portfolio</h4>
-                                <p>Gain full access control through Meta Business Suite. Seamlessly manage all aspects of your business.</p>
-                            </div>
-                        </div>
-                    
-                        <!-- Step 4 -->
-                        <div class="col-lg-4">
-                            <div class="item second-item">
-                                <div class="number">
-                                    <h6>4</h6>
-                                </div>
-                                <div class="icon">
-                                    <img src="assets/images/client website link.png" alt="Client Website Link">
-                                </div>
-                                <h4>Client Website Link</h4>
-                                <p> Ensure accuracy as it may be used in communications related to WhatsApp API services.</p>
-                            </div>
-                        </div>
-                    
-                        <!-- Step 5 -->
-                        <div class="col-lg-4">
-                            <div class="item second-item">
-                                <div class="number">
-                                    <h6>5</h6>
-                                </div>
-                                <div class="icon">
-                                    <img src="assets/images/client bussiness name.png" alt="Client Business Name">
-                                </div>
-                                <h4>Client Business Name</h4>
-                                <p>This is the name displayed to customers via the WhatsApp API. Ensure it accurately represents your brand.</p>
-                            </div>
-                        </div>
-                    
-                        <!-- Step 6 -->
-                        <div class="col-lg-4">
-                            <div class="item second-item">
-                                <div class="number">
-                                    <h6>6</h6>
-                                </div>
-                                <div class="icon">
-                                    <img src="assets/images/display name.png" alt="Display Name Suggestion">
-                                </div>
-                                <h4>Display Name Suggestion from Client</h4>
-                                <p>Ensure the name is appropriate, recognizable, and aligns with your brand to enhance customer engagement effectively.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
+        <div class="center-container">
+          <div>
+            <div id="features">
+              <div class="underline"></div>
+              <h2>
+                Grow Your Business Using <em>WhatsApp API</em> In Market.
+              </h2>
             </div>
+            <div class="card-container">
+              <div class="card">
+                <img src="assets/images/whatsapp chat.jpeg" alt="WhatsApp Chat" />
+                <div class="card-content">
+                  <h4>WhatsApp Chat</h4>
+                  <p>
+                    Unlike the Business App, WhatsApp API lets you send bulk
+                    messages to thousands safely—ideal for campaigns, promos,
+                    and announcements to boost reach without the risk of bans.
+                  </p>
+                  <a href="tel:+917845863256" target="_blank" class="explore-button">Explore WhatsApp API</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="assets/images/integrate toold.jpeg" alt="Integrate Your Tools" />
+                <div class="card-content">
+                  <h4>Integrate Your Excisting Tools</h4>
+                  <p>
+                    Integrate WhatsApp API with existing CRMs to track chats,
+                    assign agents, and personalize messages. Boost sales
+                    efficiency, improve lead conversion, and build strong
+                    customer relationships.
+                  </p>
+                  <a href="#contact-form" class="explore-button">Explore Today</a>
+                </div>
+              </div>
+              <div class="card">
+                <img src="assets/images/chatbots.jpeg" alt="Automated Chatbots" />
+                <div class="card-content">
+                  <h4>Automated Chatbots</h4>
+                  <p>
+                    Engage customers 24/7 with WhatsApp API-powered chatbots.
+                    Automate replies, boost support, and convert leads faster
+                    with smart, real-time conversations.
+                  </p>
+                  <a href="#contact-form" class="explore-button">Explore Today</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div class="ad-container">
-            <div class="ad-text">
-                <h1>Run Click to WhatsApp Ads for 5X Leads</h1>
-                <p>Run ads on Facebook and Instagram that land on WhatsApp. 5X your lead generation & 2-3X conversions instantly!</p>
-                <ul>
-                    <li>Build Click to WhatsApp Ads from the AixBot Platform</li>
-                    <li>Get all your leads segregated according to ad campaigns</li>
-                    <li>Build chatbot flows based on ads or retarget via broadcast</li>
-                </ul>
-                <a href="#" class="cta-button">Start Your Trial Now →</a>
-            </div>
-            <div class="ad-image">
-                <img src="./assets/images/ads aixbot.jpeg" alt="Ad Example">
-            </div>
-        </div>
-        
+      </div>
+    </div>
 
-
-
-        <div class="why-whatsapp">
-            <h2>Why Choose WhatsApp?</h2>
-            <p>WhatsApp is the One Platform that brings together Actionable Notifications & Customer Support!</p>
-            <div class="features">
-                <div class="feature-box">
-                    <img src="./assets/images/open2.png" alt="Open Rates">
-                    <h3>98% Open Rates</h3>
-                    <p>Engage your audience with unmatched open rates, ensuring your messages are seen.</p>
-                </div>
-                <div class="feature-box">
-                    <img src="./assets/images/click.png" alt="Click Rates">
-                    <h3>45-60% Click Rates</h3>
-                    <p>Boost interaction with high click rates, driving traffic and engagement.</p>
-                </div>
-                <div class="feature-box">
-                    <img src="./assets/images/users.png" alt="Users">
-                    <h3>2.4 Bn+ Users</h3>
-                    <p>Reach a vast audience with over 2.4 billion users worldwide.</p>
-                </div>
+    <div class="create-nft">
+      <div class="container">
+        <div class="rounded-container">
+          <!-- Header Section -->
+          <div class="row align-items-center mb-5">
+            <div class="col-lg-8">
+              <div class="section-heading">
+                <div class="line-dec"></div>
+                <h2>How to get WhatsApp Business API</h2>
+              </div>
             </div>
-            <!-- <a href="your-link-here" class="explore-button">Explore Now</a> -->
-        </div>
-        
-
-
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
-                        style="color: rgb(5 150 105); font-weight: 700;">
-                        What is WhatsApp API?
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>The WhatsApp API enables businesses to integrate WhatsApp messaging into their systems, allowing
-                            for automated, scalable, and secure communication with customers. This API supports features
-                            like sending and receiving messages, managing contacts, and automating customer interactions,
-                            Enhancing customer service and engagement.</strong>
-                    </div>
-                </div>
+            <div class="col-lg-4">
+              <a class="#contact-section">Start Trial</a>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
-                        style="color: rgb(5 150 105); font-weight: 700;">
-                        How do I get started with the WhatsApp API?
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>Sign up for WhatsApp Business, get API access, set up a number, and integrate the API to send and receive messages.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
-                        style="color: rgb(5 150 105); font-weight: 700;">
-                        Can I send WhatsApp campaigns without an API?
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        Yes, with the WhatsApp Business App, but limited ones. Only to 256 at a time, and only to people who have your business number saved in their phone. One device and one user only. No mass campaigns, very limited automation. Unsuitable for customer service and proactive engagement. Also, you cannot apply for the official green tick badge unless you’re on the API.
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
 
-
-        <footer class="text-center text-lg-start text-dark" id="footer" style="background-color: black">
-            <!-- Section: Social media -->
-            <section class="d-flex justify-content-between p-4 text-white" style="background-color: rgb(16, 185, 129)">
-                <!-- Left -->
-                <div class="me-5">
-                    <span>Get connected with us on social networks:</span>
-                </div>
-                <!-- Left -->
-
-                <!-- Right -->
-                <div>
-                    <a href="https://www.facebook.com/skyxdigi?paipv=0&eav=AfY1UitqZOjJO6w5lV6HY9zVQD274sco6cDxYN-SrZZJvOAMSfb5dyhz-294TQ0hBdE&_rdr"
-                        style="color: white; margin-right: 1rem; transition: transform 0.3s ease, color 0.3s ease;"
-                        onmouseover="this.style.transform='scale(1.2)'; this.style.color='rgb(5, 150, 105)';"
-                        onmouseout="this.style.transform='scale(1)'; this.style.color='white';">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://x.com/Skyxdigi"
-                        style="color: white; margin-right: 1rem; transition: transform 0.3s ease, color 0.3s ease;"
-                        onmouseover="this.style.transform='scale(1.2)'; this.style.color='rgb(0, 153, 255)';"
-                        onmouseout="this.style.transform='scale(1)'; this.style.color='white';">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://skyxdigisolutions.com/"
-                        style="color: white; margin-right: 1rem; transition: transform 0.3s ease, color 0.3s ease;"
-                        onmouseover="this.style.transform='scale(1.2)'; this.style.color='rgb(219, 68, 55)';"
-                        onmouseout="this.style.transform='scale(1)'; this.style.color='white';">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="https://www.instagram.com/skyxdigisolutions/"
-                        style="color: white; margin-right: 1rem; transition: transform 0.3s ease, color 0.3s ease;"
-                        onmouseover="this.style.transform='scale(1.2)'; this.style.color='rgb(228, 64, 95)';"
-                        onmouseout="this.style.transform='scale(1)'; this.style.color='white';">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/skyx-digisolutions/?originalSubdomain=in"
-                        style="color: white; margin-right: 1rem; transition: transform 0.3s ease, color 0.3s ease;"
-                        onmouseover="this.style.transform='scale(1.2)'; this.style.color='rgb(0, 119, 181)';"
-                        onmouseout="this.style.transform='scale(1)'; this.style.color='white';">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-                <!-- Right -->
-
-            </section>
-            <!-- Section: Social media -->
-
-            <!-- Section: Links  -->
-            <section class="">
-                <div class="container text-center text-md-start mt-5">
-                    <!-- Grid row -->
-                    <div class="row mt-3">
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                            <!-- Content -->
-                            <div class="footer-logo">
-                                <img class="footer-img" src="./assets/images/Aix Logo.png" alt="Logo" />
-                            </div>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p>
-                                AixBot provides WhatsApp API services to help businesses scale, grow, and engage
-                                customers effectively and effortlessly
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <!-- Links -->
-                            <h6 class="footer-link text-uppercase fw-bold" style="color:#fff;font-size: 1rem;">Links</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p>
-                                <a href="#banner_main" class="text-white link-hover">Home</a>
-                            </p>
-                            <p>
-                                <a href="#Partners" class="text-white link-hover">Partners</a>
-                            </p>
-                            <p>
-                                <a href="#features" class="text-white link-hover">Features</a>
-                            </p>
-                            <p>
-                                <a href="#accordionExample" class="text-white link-hover">FAQ</a>
-                            </p>
-                            <p>
-                                <a href="#footer" class="text-white link-hover">About</a>
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-
-
-
-
-                        <!-- Grid column -->
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                            <!-- Links -->
-                            <h6 class="footer-link fw-bold" style="font-size: 1rem;color: #fff;">Info</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p><i class="fas fa-home mr-3"></i>Wahab Nagar Near Stadium,Krishnagiri</p>
-                            <p><i class="fas fa-envelope mr-3"></i> info@aixbot.com</p>
-                            <p><i class="fas fa-phone mr-3"></i> + 91 7845604588
-                            </p>
-                            <p><i class="fas fa-print mr-3"></i> + 91 96631 88995</p>
-                        </div>
-                        <!-- Grid column -->
+        <!-- Cards Section -->
+        <div class="row">
+          <!-- Step 1 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card-with-badge">
+              <div class="outside-badge text-white rounded-circle d-flex align-items-center justify-content-center">
+                <h6 class="m-0">1</h6>
+              </div>
+              <div class="uniform-card bg-white rounded">
+                <div class="card-content">
+                  <div class="icon-container">
+                    <div style="
+                          width: 60px;
+                          height: 50px;
+                          background: #e5e7eb;
+                          border-radius: 8px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          font-size: 1.5rem;
+                        ">
+                      📱
                     </div>
-                    <!-- Grid row -->
+                  </div>
+                  <h4 class="card-title">Phone No</h4>
+                  <p class="card-description text-black">
+                    Provide the phone number to be used with the WhatsApp API
+                    service. Engage without registering a WhatsApp account.
+                  </p>
                 </div>
-            </section>
-            <!-- Section: Links  -->
-
-            <!-- Copyright -->
-            <div class="text-center p-3" style="color: gray; background-color: rgba(0, 0, 0, 0.2)">
-                © <span id="year"></span> - All rights reserved:
-                <a >AixBot Product of</a> 
-                <a  href="https://skyxdigisolutions.com/">Sky X Digi Solutions</a>
+              </div>
             </div>
-            <!-- Copyright -->
-        </footer>
+          </div>
 
+          <!-- Step 2 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card-with-badge">
+              <div class="outside-badge text-white rounded-circle d-flex align-items-center justify-content-center">
+                <h6 class="m-0">2</h6>
+              </div>
+              <div class="uniform-card bg-white rounded">
+                <div class="card-content">
+                  <div class="icon-container">
+                    <div style="
+                          width: 60px;
+                          height: 50px;
+                          background: #e5e7eb;
+                          border-radius: 8px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          font-size: 1.5rem;
+                        ">
+                      📧
+                    </div>
+                  </div>
+                  <h4 class="card-title">Email ID</h4>
+                  <p class="card-description text-black">
+                    Email ID is required for creating the WhatsApp API
+                    onboarding. Revolutionize communications with our service.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!-- Step 3 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card-with-badge">
+              <div class="outside-badge text-white rounded-circle d-flex align-items-center justify-content-center">
+                <h6 class="m-0">3</h6>
+              </div>
+              <div class="uniform-card bg-white rounded">
+                <div class="card-content">
+                  <div class="icon-container">
+                    <div style="
+                          width: 60px;
+                          height: 50px;
+                          background: #e5e7eb;
+                          border-radius: 8px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          font-size: 1.5rem;
+                        ">
+                      💼
+                    </div>
+                  </div>
+                  <h4 class="card-title">Business Portfolio</h4>
+                  <p class="card-description text-black">
+                    Gain full access control through Meta Business Suite.
+                    Seamlessly manage all aspects of your business.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <!-- Scripts -->
-        <!-- Bootstrap core JavaScript -->
-        <script src="vendor/jquery/jquery.min.js "></script>
-        <script src="vendor/bootstrap/js/bootstrap.min.js "></script>
+          <!-- Step 4 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card-with-badge">
+              <div class="outside-badge text-white rounded-circle d-flex align-items-center justify-content-center">
+                <h6 class="m-0">4</h6>
+              </div>
+              <div class="uniform-card bg-white rounded">
+                <div class="card-content">
+                  <div class="icon-container">
+                    <div style="
+                          width: 60px;
+                          height: 50px;
+                          background: #e5e7eb;
+                          border-radius: 8px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          font-size: 1.5rem;
+                        ">
+                      🔗
+                    </div>
+                  </div>
+                  <h4 class="card-title">Client Website Link</h4>
+                  <p class="card-description text-black">
+                    Ensure accuracy as it may be used in communications
+                    related to WhatsApp API services.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <script src="assets/js/isotope.min.js "></script>
-        <script src="assets/js/owl-carousel.js "></script>
+          <!-- Step 5 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card-with-badge">
+              <div class="outside-badge text-white rounded-circle d-flex align-items-center justify-content-center">
+                <h6 class="m-0">5</h6>
+              </div>
+              <div class="uniform-card bg-white rounded">
+                <div class="card-content">
+                  <div class="icon-container">
+                    <div style="
+                          width: 60px;
+                          height: 50px;
+                          background: #e5e7eb;
+                          border-radius: 8px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          font-size: 1.5rem;
+                        ">
+                      🏢
+                    </div>
+                  </div>
+                  <h4 class="card-title">Client Business Name</h4>
+                  <p class="card-description text-black">
+                    This is the name displayed to customers via the WhatsApp
+                    API. Ensure it accurately represents your brand.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <script src="assets/js/tabs.js "></script>
-        <script src="assets/js/popup.js "></script>
-        <script src="assets/js/custom.js "></script>
-        <script>
-            // Get the current year and display it in the span with id="year"
-            document.getElementById("year").innerText = new Date().getFullYear();
-        </script>
+          <!-- Step 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card-with-badge">
+              <div class="outside-badge text-white rounded-circle d-flex align-items-center justify-content-center">
+                <h6 class="m-0">6</h6>
+              </div>
+              <div class="uniform-card bg-white rounded">
+                <div class="card-content">
+                  <div class="icon-container">
+                    <div style="
+                          width: 60px;
+                          height: 50px;
+                          background: #e5e7eb;
+                          border-radius: 8px;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          font-size: 1.5rem;
+                        ">
+                      ✨
+                    </div>
+                  </div>
+                  <h4 class="card-title">
+                    Display Name Suggestion from Client
+                  </h4>
+                  <p class="card-description text-black">
+                    Ensure the name is appropriate, recognizable, and aligns
+                    with your brand to enhance customer engagement
+                    effectively.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container py-5">
+    <div class="text-center mb-4">
+      <h3 class="fw-semibold text-lg text-dark mb-3">
+        A Suitable WhatsApp Business Account is Essential for Growth
+      </h3>
+      <h4 class="fw-bold text-dark">
+        WhatsApp Business App vs. API: Key Differences
+      </h4>
+    </div>
+    <div class="comparison-table">
+      <!-- Desktop View (md and up) -->
+      <div class="table-responsive d-none d-md-block">
+        <table class="table table-compare m-0">
+          <!-- Desktop table content remains the same as your original -->
+        </table>
+      </div>
 
+      <!-- Tablet View (sm) -->
+      <div class="d-none d-sm-block d-md-none">
+        <!-- Tablet view content remains the same as your original -->
+      </div>
 
+      <!-- Improved Mobile View (xs) -->
+      <div class="d-block d-sm-none">
+        <div class="row g-3">
+          <!-- Feature Cards - Each feature gets its own card -->
+          <div class="col-12">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-header bg-light">
+                <h5 class="mb-0 d-flex align-items-center">
+                  <i class="fas fa-robot text-primary me-2"></i>
+                  Automated Messages
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-mobile-alt text-danger me-2"></i>
+                        <h6 class="mb-0">Business App</h6>
+                      </div>
+                      <div class="text-danger">
+                        <i class="fas fa-times-circle me-1"></i> Not available
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-server text-success me-2"></i>
+                        <h6 class="mb-0">Business API</h6>
+                      </div>
+                      <div class="text-success">
+                        <i class="fas fa-check-circle me-1"></i> Available
+                      </div>
+                      <small class="text-muted d-block mt-2">
+                        Triggers on keywords and welcome messages
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-12">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-header bg-light">
+                <h5 class="mb-0 d-flex align-items-center">
+                  <i class="fas fa-bullhorn text-primary me-2"></i>
+                  Send Bulk Notifications
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-mobile-alt text-danger me-2"></i>
+                        <h6 class="mb-0">Business App</h6>
+                      </div>
+                      <div class="text-danger">
+                        <i class="fas fa-times-circle me-1"></i> Limited to
+                        256 contacts
+                      </div>
+                      <small class="text-danger d-block mt-2">
+                        Risk of account ban
+                      </small>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-server text-success me-2"></i>
+                        <h6 class="mb-0">Business API</h6>
+                      </div>
+                      <div class="text-success">
+                        <i class="fas fa-check-circle me-1"></i> Available
+                      </div>
+                      <small class="text-muted d-block mt-2">
+                        Send custom messages on trigger keywords
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!-- Unlimited Access -->
+          <div class="col-12">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-header bg-light">
+                <h5 class="mb-0 d-flex align-items-center">
+                  <i class="fas fa-users text-primary me-2"></i>
+                  Unlimited Access
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-mobile-alt text-danger me-2"></i>
+                        <h6 class="mb-0">Business App</h6>
+                      </div>
+                      <div class="text-danger">
+                        <i class="fas fa-times-circle me-1"></i> Only 1 login
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-server text-success me-2"></i>
+                        <h6 class="mb-0">Business API</h6>
+                      </div>
+                      <div class="text-success">
+                        <i class="fas fa-check-circle me-1"></i> Role-based
+                        access
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!-- Include all other features similarly -->
+          <!-- Integration -->
+          <div class="col-12">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-header bg-light">
+                <h5 class="mb-0 d-flex align-items-center">
+                  <i class="fas fa-plug text-primary me-2"></i>
+                  Integration
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-mobile-alt text-danger me-2"></i>
+                        <h6 class="mb-0">Business App</h6>
+                      </div>
+                      <div class="text-danger">
+                        <i class="fas fa-times-circle me-1"></i> Not possible
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-server text-success me-2"></i>
+                        <h6 class="mb-0">Business API</h6>
+                      </div>
+                      <div class="text-success">
+                        <i class="fas fa-check-circle me-1"></i> Supported
+                      </div>
+                      <small class="text-muted d-block mt-2">
+                        CRM integration supported
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!-- Chatbots -->
+          <div class="col-12">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-header bg-light">
+                <h5 class="mb-0 d-flex align-items-center">
+                  <i class="fas fa-robot text-primary me-2"></i>
+                  Chatbots
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-mobile-alt text-danger me-2"></i>
+                        <h6 class="mb-0">Business App</h6>
+                      </div>
+                      <div class="text-danger">
+                        <i class="fas fa-times-circle me-1"></i> Not available
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-server text-success me-2"></i>
+                        <h6 class="mb-0">Business API</h6>
+                      </div>
+                      <div class="text-success">
+                        <i class="fas fa-check-circle me-1"></i> Available
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <!-- Scripts -->
-        <!-- Bootstrap core JavaScript -->
-        <script src="vendor/jquery/jquery.min.js "></script>
-        <script src="vendor/bootstrap/js/bootstrap.min.js "></script>
+          <!-- Workflows Setup -->
+          <div class="col-12">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-header bg-light">
+                <h5 class="mb-0 d-flex align-items-center">
+                  <i class="fas fa-project-diagram text-primary me-2"></i>
+                  Workflows Setup
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-mobile-alt text-danger me-2"></i>
+                        <h6 class="mb-0">Business App</h6>
+                      </div>
+                      <div class="text-danger">
+                        <i class="fas fa-times-circle me-1"></i> Not supported
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-server text-success me-2"></i>
+                        <h6 class="mb-0">Business API</h6>
+                      </div>
+                      <div class="text-success">
+                        <i class="fas fa-check-circle me-1"></i> Supported
+                      </div>
+                      <small class="text-muted d-block mt-2">
+                        Custom and pre-built workflows
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <script src="assets/js/isotope.min.js "></script>
-        <script src="assets/js/owl-carousel.js "></script>
+          <!-- Analytics -->
+          <div class="col-12">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-header bg-light">
+                <h5 class="mb-0 d-flex align-items-center">
+                  <i class="fas fa-chart-bar text-primary me-2"></i>
+                  Analytics
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="solution-box bg-danger-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-mobile-alt text-danger me-2"></i>
+                        <h6 class="mb-0">Business App</h6>
+                      </div>
+                      <div class="text-danger">
+                        <i class="fas fa-times-circle me-1"></i> Not available
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="solution-box bg-success-bg h-100 p-3 rounded">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-server text-success me-2"></i>
+                        <h6 class="mb-0">Business API</h6>
+                      </div>
+                      <div class="text-success">
+                        <i class="fas fa-check-circle me-1"></i> Available
+                      </div>
+                      <small class="text-muted d-block mt-2">
+                        Detailed campaign & agent analytics
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <script src="assets/js/tabs.js "></script>
-        <script src="assets/js/popup.js "></script>
-        <script src="assets/js/custom.js "></script>
+  <div class="ad-container">
+    <div class="ad-text">
+      <h1>Run Click to WhatsApp Ads for 5X Leads</h1>
+      <p>
+        Run ads on Facebook and Instagram that land on WhatsApp. 5X your lead
+        generation & 2-3X conversions instantly!
+      </p>
+      <ul>
+        <li>Build Click to WhatsApp Ads from the AixBot Platform</li>
+        <li>Get all your leads segregated according to ad campaigns</li>
+        <li>Build chatbot flows based on ads or retarget via broadcast</li>
+      </ul>
+      <a href="#contact-form" class="cta-button">Start Your Trial Now →</a>
+    </div>
+    <div class="ad-image">
+      <img src="./assets/images/ads aixbot.jpeg" alt="Ad Example" />
+    </div>
+  </div>
 
-        <script src="https://code.jquery.com/jquery-2.2.0.min.js " type="text/javascript "></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js "></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js "></script>
+  <div class="why-whatsapp">
+    <h2>Why Choose WhatsApp?</h2>
+    <p>
+      WhatsApp is the One Platform that brings together Actionable
+      Notifications & Customer Support!
+    </p>
+    <div class="features">
+      <div class="feature-box">
+        <img src="./assets/images/open2.png" alt="Open Rates" />
+        <h3>98% Open Rates</h3>
+        <p>
+          Engage your audience with unmatched open rates, ensuring your
+          messages are seen.
+        </p>
+      </div>
+      <div class="feature-box">
+        <img src="./assets/images/click.png" alt="Click Rates" />
+        <h3>45-60% Click Rates</h3>
+        <p>
+          Boost interaction with high click rates, driving traffic and
+          engagement.
+        </p>
+      </div>
+      <div class="feature-box">
+        <img src="./assets/images/users.png" alt="Users" />
+        <h3>2.4 Bn+ Users</h3>
+        <p>Reach a vast audience with over 2.4 billion users worldwide.</p>
+      </div>
+    </div>
+  </div>
+  <div class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="main-title">
+            Broadcast Promotional Messages on WhatsApp
+            <span class="text-muted">(Officially)</span>
+          </h1>
+          <p class="subtitle">
+            Enjoy a Limitless Broadcasting experience on WhatsApp
+          </p>
 
-        <script>
-            $(document).ready(function () {
-                $('.customer-logos').slick({
-                    slidesToShow: 6,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 1500,
-                    arrows: false,
-                    dots: false,
-                    pauseOnHover: false,
-                    responsive: [{
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 4
-                        }
-                    }, {
-                        breakpoint: 520,
-                        settings: {
-                            slidesToShow: 3
-                        }
-                    }]
-                });
-            });
-        </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const toggleBtn = document.getElementById('toggle-btn');
-                const menuLinks = document.getElementById('menu-links');
+          <div class="features">
+            <div class="feature-item">
+              <h3 class="feature-title">8+ Powerful Messaging Categories</h3>
+              <p class="feature-description">
+                Send Promotions, Offers, Coupon codes, Carousels and More-
+                Risk-Free!
+              </p>
+            </div>
 
-                toggleBtn.addEventListener('click', () => {
-                    menuLinks.classList.toggle('active');
-                });
-            });
+            <div class="feature-item">
+              <h3 class="feature-title">Add CTAs. Drive 3x Conversions</h3>
+              <p class="feature-description">
+                Turn conversations into conversions with eye-catching CTA and
+                Quick Reply buttons
+              </p>
+            </div>
 
-        </script>
-        <script>
-            let lastScrollTop = 0; // Keep track of last scroll position
+            <div class="feature-item">
+              <h3 class="feature-title">Schedule your WhatsApp messages</h3>
+              <p class="feature-description">
+                Streamline your work, Schedule Broadcasts 2 months ahead of
+                time
+              </p>
+            </div>
+          </div>
 
-            window.addEventListener('scroll', function () {
-                const header = document.querySelector('header');
+          <a href="tel:+917845863256" target="_blank" class="btn-start">Check your offer pack →</a>
+        </div>
 
-                let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <div class="phone-mockup">
+            <div class="chat-header">
+              <small class="text-muted">3:35</small>
+              <small class="text-muted">5G ▮▮▮</small>
+            </div>
 
-                if (currentScrollTop > lastScrollTop) {
-                    // Scrolling down
-                    header.classList.remove('header-compact');
-                } else {
-                    // Scrolling up
-                    header.classList.add('header-compact');
-                }
+            <div class="company-info mb-3">
+              <span class="text-muted">← 143</span>
+              <div class="company-avatar">HI</div>
+              <div>
+                <div class="fw-bold">Headway Inc.</div>
+                <small class="text-success">● online</small>
+              </div>
+            </div>
 
-                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
-            });
-        </script>
-        <!-- Typed.js Script -->
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            <div class="message-bubble">
+              <div class="message-image"></div>
+              <div class="fw-bold mb-1">
+                Your Order Rockway 450 Headphones
+              </div>
+              <small class="text-muted">will be delivered by 21st January, Tuesday</small>
+            </div>
 
-        <script>
-            // Typed.js Initialization
-            document.addEventListener('DOMContentLoaded', function () {
-                const typed = new Typed('.multiple-txt', {
-                    strings: ['Send', 'Engage'],
-                    typeSpeed: 70,
-                    backSpeed: 70,
-                    backDelay: 1000,
-                    loop: true,
-                });
-            });
-        </script>
-        <script>
-            window.addEventListener('scroll', function () {
-                const header = document.querySelector('header');
-                header.classList.toggle('scrolled', window.scrollY > 50);
-            });
-        </script>
+            <div class="reply-container">
+              <div class="reply-bubble">Thank You! ✓✓</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne" style="color: rgb(5 150 105); font-weight: 700">
+          What is WhatsApp API?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>The WhatsApp API enables businesses to integrate WhatsApp
+            messaging into their systems, allowing for automated, scalable,
+            and secure communication with customers. This API supports
+            features like sending and receiving messages, managing contacts,
+            and automating customer interactions, Enhancing customer service
+            and engagement.</strong>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo" style="color: rgb(5 150 105); font-weight: 700">
+          How do I get started with the WhatsApp API?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Sign up for WhatsApp Business, get API access, set up a number,
+            and integrate the API to send and receive messages.</strong>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+          style="color: rgb(5 150 105); font-weight: 700">
+          Can I send WhatsApp campaigns without an API?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Yes, with the WhatsApp Business App, but limited ones. Only to 256
+          at a time, and only to people who have your business number saved in
+          their phone. One device and one user only. No mass campaigns, very
+          limited automation. Unsuitable for customer service and proactive
+          engagement. Also, you cannot apply for the official green tick badge
+          unless you're on the API.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+          style="color: rgb(5 150 105); font-weight: 700">
+          Can I use WhatsApp API for sending messages in bulk?
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Yes, businesses can send bulk messages using the WhatsApp Business
+          API, but all messages must comply with WhatsApp’s policies. You must
+          use pre-approved message templates for outbound notifications, while
+          session messages (customer-initiated) allow more flexibility.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
+          style="color: rgb(5 150 105); font-weight: 700">
+          What is the best WhatsApp Business platform for businesses ?
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          The best WhatsApp Business platform depends on your business needs.
+          If you’re looking for an all-in-one solution, aixbot offers a
+          powerful platform with automation, CRM integrations, campaign
+          management, and analytics to help businesses grow using WhatsApp.
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- Bootstrap CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Closing categories-collections div -->
 
-        <!-- Bootstrap Bundle with Popper -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <section class="contact-section bg-light py-5" id="contact-form">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Contact Form Column -->
+        <div class="col-lg-6">
+          <div class="contact-card shadow-lg rounded-4 p-4 p-md-5 bg-white">
+            <h2 class="display-5 fw-bold mb-4 text-primary">Get in Touch</h2>
+            <p class="mb-4 text-muted">
+              Have questions or want to discuss a project? Fill out the form
+              below and we'll get back to you within 24 hours.
+            </p>
 
+            <form action="https://api.web3forms.com/submit" method="POST" class="needs-validation" novalidate>
+              <input type="hidden" name="access_key" value="86b6c5f7-6c1a-4680-879f-bf491af41670" />
+              <input type="hidden" name="subject" value="New Contact Form Submission" />
+              <input type="checkbox" name="botcheck" class="d-none" />
 
+              <div class="mb-4">
+                <label for="name" class="form-label fw-bold">Full Name *</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-primary text-white">
+                    <i class="fas fa-user"></i>
+                  </span>
+                  <input type="text" class="form-control py-3" id="name" name="name" placeholder="John Doe" required />
+                  <div class="invalid-feedback">Please enter your name</div>
+                </div>
+              </div>
 
+              <div class="mb-4">
+                <label for="email" class="form-label fw-bold">Email Address</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-primary text-white">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <input type="email" class="form-control py-3" id="email" name="email" placeholder="john@example.com"
+                    required />
+                  <div class="invalid-feedback">
+                    Please enter a valid email
+                  </div>
+                </div>
+              </div>
 
+              <div class="mb-4">
+                <label for="phone" class="form-label fw-bold">Phone Number *</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-primary text-white">
+                    <i class="fas fa-phone"></i>
+                  </span>
+                  <input type="tel" class="form-control py-3" id="phone" name="phone" placeholder="+1 (555) 123-4567" />
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="message" class="form-label fw-bold">Your Message *</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-primary text-white align-items-start pt-3">
+                    <i class="fas fa-comment-dots"></i>
+                  </span>
+                  <textarea class="form-control py-3" id="message" name="message" rows="4"
+                    placeholder="How can we help you?" required></textarea>
+                  <div class="invalid-feedback">
+                    Please enter your message
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg py-3 fw-bold">
+                  <i class="fas fa-paper-plane me-2"></i> Send Message
+                </button>
+              </div>
+
+              <div id="form-result" class="mt-3"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Google Maps Column -->
+        <div class="col-lg-6">
+          <div class="map-card shadow-lg rounded-4 overflow-hidden h-100">
+            <div class="map-container h-100">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d89418.73277480472!2d78.12094673558802!3d12.527628053080024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bac35a6dc074d97%3A0xa7765b176b3e6aba!2sSecond%20Floor%2C%20Rayakottai%20Rd%2C%20opp.%20Stadium%20Road%2C%20Wahab%20Nagar%2C%20Krishnagiri%2C%20Tamil%20Nadu%20635002!3m2!1d12.5276406!2d78.2033486!5e1!3m2!1sen!2sin!4v1749665050611!5m2!1sen!2sin"
+                width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="min-vh-50">
+              </iframe>
+            </div>
+
+            <div class="contact-info bg-white p-4 p-md-5">
+              <h3 class="h4 fw-bold mb-4">Our Location</h3>
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <div class="d-flex align-items-center">
+                    <div class="icon-circle bg-primary text-white me-3">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <span>123 Business Avenue, Suite 500<br />New York, NY
+                      10001</span>
+                  </div>
+                </li>
+                <li class="mb-3">
+                  <div class="d-flex align-items-center">
+                    <div class="icon-circle bg-primary text-white me-3">
+                      <i class="fas fa-phone"></i>
+                    </div>
+                    <span>+1 (555) 123-4567</span>
+                  </div>
+                </li>
+                <li class="mb-3">
+                  <div class="d-flex align-items-center">
+                    <div class="icon-circle bg-primary text-white me-3">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <span>contact@yourbusiness.com</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex align-items-center">
+                    <div class="icon-circle bg-primary text-white me-3">
+                      <i class="fas fa-clock"></i>
+                    </div>
+                    <span>Mon-Fri: 9AM - 5PM<br />Sat-Sun: Closed</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-lg-start text-dark" id="footer" style="background-color: black">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-between p-4 text-white" style="background-color: rgb(16, 185, 129)">
+      <!-- Left -->
+      <div class="me-5">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="https://www.facebook.com/skyxdigi?paipv=0&eav=AfY1UitqZOjJO6w5lV6HY9zVQD274sco6cDxYN-SrZZJvOAMSfb5dyhz-294TQ0hBdE&_rdr"
+          style="
+              color: white;
+              margin-right: 1rem;
+              transition: transform 0.3s ease, color 0.3s ease;
+            " target="_blank" onmouseover="this.style.transform='scale(1.2)'; this.style.color='rgb(5, 150, 105)';"
+          onmouseout="this.style.transform='scale(1)'; this.style.color='white';">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/Skyxdigi" target="_blank" style="
+              color: white;
+              margin-right: 1rem;
+              transition: transform 0.3s ease, color 0.3s ease;
+            " onmouseover="this.style.transform='scale(1.2)'; this.style.color='rgb(0, 153, 255)';"
+          onmouseout="this.style.transform='scale(1)'; this.style.color='white';">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://skyxdigisolutions.com/" target="_blank" style="
+              color: white;
+              margin-right: 1rem;
+              transition: transform 0.3s ease, color 0.3s ease;
+            " onmouseover="this.style.transform='scale(1.2)'; this.style.color='rgb(219, 68, 55)';"
+          onmouseout="this.style.transform='scale(1)'; this.style.color='white';">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="https://www.instagram.com/skyxdigisolutions/" target="_blank" style="
+              color: white;
+              margin-right: 1rem;
+              transition: transform 0.3s ease, color 0.3s ease;
+            " onmouseover="this.style.transform='scale(1.2)'; this.style.color='rgb(228, 64, 95)';"
+          onmouseout="this.style.transform='scale(1)'; this.style.color='white';">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/skyx-digisolutions/?originalSubdomain=in" target="_blank" style="
+              color: white;
+              margin-right: 1rem;
+              transition: transform 0.3s ease, color 0.3s ease;
+            " onmouseover="this.style.transform='scale(1.2)'; this.style.color='rgb(0, 119, 181)';"
+          onmouseout="this.style.transform='scale(1)'; this.style.color='white';">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <div class="footer-logo">
+              <img class="footer-img" src="./assets/images/Aix Logo.png" alt="Logo" />
+            </div>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p>
+              AixBot provides WhatsApp API services to help businesses scale,
+              grow, and engage customers effectively and effortlessly
+            </p>
+          </div>
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="footer-link text-uppercase fw-bold" style="color: #fff; font-size: 1rem">
+              Links
+            </h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p>
+              <a href="#banner_main" class="text-white footer-link-hover">Home</a>
+            </p>
+            <p>
+              <a href="#Partners" class="text-white footer-link-hover">Partners</a>
+            </p>
+            <p>
+              <a href="#features" class="text-white footer-link-hover">Features</a>
+            </p>
+            <p>
+              <a href="#accordionExample" class="text-white footer-link-hover">FAQ</a>
+            </p>
+            <p>
+              <a href="#footer" class="text-white footer-link-hover">About</a>
+            </p>
+          </div>
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="footer-link fw-bold" style="font-size: 1rem; color: #fff">
+              Info
+            </h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p class="">
+              <i class="fas fa-home me-3"></i>Wahab Nagar Near Stadium,
+              Krishnagiri
+            </p>
+            <p><i class="fas fa-envelope me-3"></i> info@aixbot.com</p>
+            <p><i class="fas fa-phone me-3"></i> 91 9663188995</p>
+            <p><i class="fas fa-phone me-3"></i> 91 7845863256</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="text-center p-3 d-flex justify-content-around"
+      style="color: gray; background-color: rgba(0, 0, 0, 0.2)">
+      <span>© <span id="year"></span> - AixBot. All rights reserved</span>
+      <a href="https://skyxdigisolutions.com/">Product ❤️ Of Sky X Digi Solutions</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <script>
+    // Get current year
+    document.getElementById("year").innerText = new Date().getFullYear();
+
+    // Toggle menu
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("toggle-btn");
+      const menuLinks = document.getElementById("menu-links");
+
+      toggleBtn.addEventListener("click", () => {
+        menuLinks.classList.toggle("active");
+      });
+    });
+
+    // Header scroll effect
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      header.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Typed.js initialization
+    document.addEventListener("DOMContentLoaded", function () {
+      const typed = new Typed(".multiple-txt", {
+        strings: ["Send", "Engage"],
+        typeSpeed: 70,
+        backSpeed: 70,
+        backDelay: 1000,
+        loop: true,
+      });
+    });
+
+    // Slick slider
+    $(document).ready(function () {
+      $(".customer-logos").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 4,
+            },
+          },
+          {
+            breakpoint: 520,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+        ],
+      });
+    });
+  </script>
+  <script>
+    // Form validation
+    (function () {
+      "use strict";
+
+      const forms = document.querySelectorAll(".needs-validation");
+
+      Array.from(forms).forEach((form) => {
+        form.addEventListener(
+          "submit",
+          (event) => {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+
+      // Form submission handling
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const form = this;
+        const submitButton = form.querySelector('button[type="submit"]');
+        const resultDiv = document.getElementById("form-result");
+
+        submitButton.disabled = true;
+        submitButton.innerHTML =
+          '<i class="fas fa-spinner fa-spin me-2"></i> Sending...';
+
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              resultDiv.innerHTML = `
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Thank you!</strong> Your message has been sent successfully.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          `;
+              form.reset();
+              form.classList.remove("was-validated");
+            } else {
+              resultDiv.innerHTML = `
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>Error!</strong> ${data.message}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          `;
+            }
+          })
+          .catch((error) => {
+            resultDiv.innerHTML = `
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error!</strong> There was a problem sending your message.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        `;
+          })
+          .finally(() => {
+            submitButton.disabled = false;
+            submitButton.innerHTML =
+              '<i class="fas fa-paper-plane me-2"></i> Send Message';
+          });
+      });
+    })();
+  </script>
 </body>
 
 </html>
